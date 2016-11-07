@@ -39,5 +39,13 @@ mkdir(imgname);
 %     end
 % end
 
-end
+%making a folder with the individual blobs
+cmd=['python',' ','segmentBacilli.py',' ',strcat(imgname,'Bacilli'),' ',imgname];
+[status, commandOut] = system(cmd);
 
+%Counting
+countBacilli(imgname);
+
+cd('..');
+
+end
